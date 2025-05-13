@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  clone-repo:
+    cmds:
+      - rm -rf /tmp/repo-tmp
+      - git clone https://github.com/dddrop/hs-template-cursor-rule-101-git.git /tmp/repo-tmp
+      - rm -rf /tmp/repo-tmp/.git
+      - cp -r /tmp/repo-tmp/. .
+      - rm -rf /tmp/repo-tmp
+    desc: "Clone the contents of the specified repository into the current directory, without .git folder"

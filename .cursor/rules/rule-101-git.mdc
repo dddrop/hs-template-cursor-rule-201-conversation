@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Git Guidelines
+## Commit Message Guidelines (Semantic Commit Message)
+
+The language of the commit message should follow the natural language defined in `.agent_workspace/configs/nature_lanaguage.md`. Each commit must follow the format below:
+
+```text
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+- **type**: Type of change, commonly used types include:
+  - feat: New feature
+  - fix: Bug fix
+  - docs: Documentation changes
+  - style: Code style changes (does not affect functionality, e.g., spaces, semicolons)
+  - refactor: Code refactoring (not adding features or fixing bugs)
+  - perf: Performance improvements
+  - test: Adding or modifying tests
+  - chore: Changes to the build process or auxiliary tools
+  - revert: Reverting a previous commit
+- **scope**: Area of impact (optional), such as a module or filename
+- **subject**: A brief summary of the commit (no more than 50 characters)
+- **body**: Detailed description (optional), explaining the motivation, before-and-after logic, etc.
+- **footer**: Issue reference or BREAKING CHANGE notice (optional)
+
+**Example:**
+
+```text
+feat(auth): support third-party login
+
+Implemented Google and GitHub third-party login and optimized the user registration flow.
+
+BREAKING CHANGE: User table structure has changed; data migration is required.
+```
+
+## Branching Strategy (Git Flow)
+
+- **Main Branch (`main`)**: Always in a deployable state; only merge tested `release` or `hotfix` branches.
+- **Development Branch (`develop`)**: Used for daily development; all feature branches should be merged into `develop`.
+- **Feature Branch (`feature/xxx`)**: Used for new feature development. Named as `feature/short-description`. Merged into `develop` upon completion.
+- **Release Branch (`release/xxx`)**: Used for pre-release preparation. Named as `release/version-number`. Final testing and bug fixes are done here. Merged into both `main` and `develop`.
+- **Hotfix Branch (`hotfix/xxx`)**: Used for urgent bug fixes in production. Named as `hotfix/short-description`. Merged into both `main` and `develop` after the fix.
+
+**Branch Naming Examples:**
+
+- feature/user-auth  
+- release/1.2.0  
+- hotfix/login-bug  
+

@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Conversation Rules
+
+## Basic Rules
+
+- **Always read the `task.md` and `planning.md` files in the `.agent-workspace` directory at the beginning of a new conversation** to understand the project's goals, technology stack, current status, and tasks.
+  - If tasks in the **preparation** section have not been completed, please prioritize completing the preparation phase tasks. These tasks will guide developers in creating the project plan (`planning.md`) and updating the task list (`task.md`).
+  - After completing tasks, please re-read the updated `task.md` and `planning.md` files to stay current with the task status.
+
+## Task Management
+
+- Tasks are categorized by phases.
+- Specific tasks are listed under each main category.
+- Before starting a task, please break it down into detailed steps.
+- Immediately mark completed tasks in .agent-workspace/task.md after completion.
+- Add new subtasks or TODOs discovered during development to .agent-workspace/task.md.
+- After completing each task, please **create a git commit** message and submit changes after confirmation.
+
+## Other
+
+- **Never assume missing context. If uncertain, ask questions.**
+- **Never imagine libraries or functions**, only use known, verified libraries.
+- **Always confirm file paths and module names exist before referencing them in code or tests.**
+- **Never delete or overwrite existing code unless explicitly instructed or it's a task in `.agent-workspace/task.md`.**
