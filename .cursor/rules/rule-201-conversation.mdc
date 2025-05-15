@@ -7,9 +7,9 @@ alwaysApply: true
 
 ## Basic Rules
 
-- **Always read the `task.md` and `planning.md` files in the `.agent-workspace` directory at the beginning of a new conversation** to understand the project's goals, technology stack, current status, and tasks.
-  - If tasks in the **preparation** phase have not been completed, please prioritize completing the preparation phase tasks. These tasks will guide developers in creating the project plan (`planning.md`) and updating the task list (`task.md`).
-  - After completing tasks, please re-read the updated `task.md` and `planning.md` files to stay current with the task status.
+- **Always read the `task.md` and `context.md` files in the `.agent-workspace` directory at the beginning of a new conversation** to understand the project's goals, technology stack, current status, and tasks.
+  - If tasks in the **preparation** phase have not been completed, please prioritize completing the preparation phase tasks. These tasks will guide developers in creating the project plan and updating the task list (`task.md`).
+  - After completing tasks, please re-read the updated `task.md` file to stay current with the task status.
 - **Document your understanding of requirements** before proceeding with code generation to ensure alignment with project goals.
 - **Maintain a context summary** of key decisions and assumptions at the end of each interaction in `.agent-workspace/context.md`.
 
